@@ -1,12 +1,12 @@
 ---
 # defaults file for create-elb
 elb:
+  access_logs             : 
   cross_az_load_balancing :
+  idle_timeout            :
+  name                    :
+  region                  :
+  scheme                  :
+  security_group_ids      :
   health_check:
-    ping_protocol         : 
-    ping_port             : 
-    ping_path             : 
-    response_timeout      : 
-    interval              : 
-    unhealthy_threshold   : 
-    healthy_threshold     :
+  listeners               :
