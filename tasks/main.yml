@@ -2,11 +2,12 @@
 # tasks file for create-elb
 - name: Create load balancer
   ec2_elb_lb:
-    access_logs             : "{{ access_logs | default([]) }}"
     cross_az_load_balancing : "{{ elb.cross_az_load_balancing | default('no') }}"
-    health_check            : "{{ elb.healthcheck | default([]) }}"
+    health_check            : "{{ elb.health_check | default([]) }}"
     idle_timeout            : "{{ elb.idle_timeout | default('') }}"
     listeners               : "{{ elb.listeners | default([]) }}"
+    subnets                 : "{{ elb.subnets | default([]) }}"
+    zones                   : "{{ elb.zones | default([]) }}"
     name                    : "{{ elb.name }}"
     region                  : "{{ elb.region }}"
     scheme                  : "{{ elb.scheme | default('internal-facing') }}"
