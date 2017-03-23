@@ -1,0 +1,12 @@
+---
+# defaults file for create-elb
+elb:
+  cross_az_load_balancing :
+  idle_timeout            :
+  name                    :
+  region                  :
+  subnets                 :
+  scheme                  :
+  security_group_ids      :
+  health_check            :
+  listeners               :
