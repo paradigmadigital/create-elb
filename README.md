@@ -9,6 +9,8 @@ Create Load Balancer
   * `idle_timeout`            : ELB connections from clients and to servers are timed out after this amount of time [Default: (null)]
   * `name`                    : The name of the ELB
   * `region`                  : The AWS region to use. If not specified then the value of the AWS_REGION or EC2_REGION environment variable, if any, is used. See http://docs.aws.amazon.com/general/latest/gr/rande.html#ec2_region [Default: (null)]
+  * `zones`                   : List of availability zones to enable on this ELB
+  * `subnets`                 : A list of VPC subnets to use when creating ELB. Zones should be empty if using this.
   * `scheme`                  : The scheme to use when creating the ELB. For a private VPC-visible ELB use 'internal'. [Default: internet-facing]
   * `security_group_ids`      : A list of security groups to apply to the elb [Default: None]
   * `health_check`            : An associative array of health check configuration settings [Default: None]
